@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "270575932395",
+    "firebase_url": "https://fundayattendancemanager.firebaseio.com/",
+    "project_id": "fundayattendancemanager",
+    "storage_bucket": "fundayattendancemanager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270575932395:android:e7b32e6a74549f93",
+        "android_client_info": {
+          "package_name": "com.dexterlabs.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "270575932395-rmjn98g53b2oviahv4t1rmb1818p4739.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dexterlabs.myapplication",
+            "certificate_hash": "03bd8005edf1bb05f5567aa1ee7f9256be4ee43b"
+          }
+        },
+        {
+          "client_id": "270575932395-aopmrarb4mffoars9m4i4skoi0di72fi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnWfjIBzZSsMtJ-cISkTUsySI7nY2O8G8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "270575932395-aopmrarb4mffoars9m4i4skoi0di72fi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
