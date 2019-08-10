@@ -194,7 +194,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
 
            if (School_Location==null) {
-                Toast.makeText(this, "Please Restart the Application with Active Internet and GPS ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Please Restart the Application with Active Internet and GPS with High Accuracy setting ", Toast.LENGTH_SHORT).show();
 
             } else {
 
