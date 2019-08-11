@@ -194,6 +194,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
 
            if (School_Location==null) {
+
                 Toast.makeText(this, "Please Restart the Application with Active Internet and GPS with High Accuracy setting ", Toast.LENGTH_SHORT).show();
 
             } else {
@@ -203,10 +204,26 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                 timestamp = currentTime.toString();
                 day = timestamp.substring(0, 3);
 
-                String id = databaseActivity.push().getKey();
+               Log.e("Time Stamp",timestamp);
 
 
-                Model model = new Model(name, school, timestamp, School_Location, loc_Latitude, loc_Longitude, day);
+
+
+               String id = databaseActivity.push().getKey();
+               Log.e("id",id);
+
+
+               Model model = new Model();
+
+               model.setAddress(School_Location);
+               model.setDay(day);
+               model.setLatitude(loc_Latitude);
+               model.setLongitude(loc_Longitude);
+               model.setName(name);
+               model.setSchool(school);
+               model.setTimestamp(timestamp);
+
+               // Model model = new Model(name, school, timestamp, School_Location, loc_Latitude, loc_Longitude, day);
 
                 databaseActivity.child(id).setValue(model);
 
