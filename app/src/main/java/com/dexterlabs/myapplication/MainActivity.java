@@ -2,6 +2,7 @@ package com.dexterlabs.myapplication;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -11,6 +12,7 @@ import android.location.LocationManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -229,6 +231,24 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
                 Toast.makeText(this, "Attendance Punched Successfully!", Toast.LENGTH_SHORT).show();
 
+               new AlertDialog.Builder(this)
+                       .setTitle("Attendence Punched Successfully")
+                       .setMessage("Name "+name+"\nTime "+timestamp+"\nSchool "+school+"\nLocation "+School_Location)
+
+                       // Specifying a listener allows you to take an action before dismissing the dialog.
+                       // The dialog is automatically dismissed when a dialog button is clicked.
+                       .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                           public void onClick(DialogInterface dialog, int which) {
+                               // Continue with delete operation
+
+                               finish();
+                           }
+                       })
+
+                       // A null listener allows the button to dismiss the dialog and take no further action.
+                       .setNegativeButton(android.R.string.no, null)
+                       .setIcon(android.R.drawable.ic_dialog_alert)
+                       .show();
             }
 
 
