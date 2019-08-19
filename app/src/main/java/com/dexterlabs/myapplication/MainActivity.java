@@ -204,6 +204,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                 Date currentTime = Calendar.getInstance().getTime();
 
                 timestamp = currentTime.toString();
+                timestamp = timestamp.substring(0,20);
                 day = timestamp.substring(0, 3);
 
                Log.e("Time Stamp",timestamp);
